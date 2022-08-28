@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content=" A Machine learning Project!">
+  <meta name="keywords" content="ML,  learning, machine, machine learning, projects,">
+
+  
+  <link rel="icon" href="static/logo.png" type="image/gif" >
+  
+
+
+
+  <title> Earthquake Predictor Machine Learning Project |   Homepage  </title>
+ 
+  <style>
+   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background : black;
+  
+} 
+nav{
+  display: flex;
+  height: 90px;
+  width: 100%;
+  background: #000000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e5e5e5;
+
+}
+nav .logo{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+nav ul  {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  z-index:9999999;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 17px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: rgb(0, 0, 0);
+  font-weight: 700px;
+  background: #99b0b6;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 950px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #b3dee9;
+  }
+}
+
+
+
+
+
+
+
+
+
+::selection{
+  color: #000000;
+  background: #ffffff;
+}
+
+
+
+
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #bddbe2;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contain{
+  max-width: 450px;
+  border: 1px solid #bed9e0;
+  margin: 40px auto;
+  padding: 40px;
+}
+
+
+.contain h3{
+ color: #d7f0f7;
+ text-align:centre;
+ font-size: 19px;
+ font-weight:500;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  color:black;
+  
+}
+
+ .btnn{
+  color:black;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.labe{
+  color:White;
+  margin :  10px;
+}
+
+
+
+
+
+
+
+.cards{
+margin: 0 auto;
+padding: 40px 40px;
+user-select: none; 
+   -webkit-user-select: none; 
+   -khtml-user-select: none; 
+   -moz-user-select: none; 
+   -ms-user-select: none; }
+
+.titlee{
+font-size:30px;
+color : #d5dddf;
+font-weight: 500;
+display:flex;
+justify-content: center;
+}
+
+
+.animate__pulse {
+  --animate-duration: 2s;
+}
+
+
+
+
+.historytab {
+margin: 15px ;
+margin-bottom: 120px;
+width: 100%;
+display:flex;
+justify-content: space-around;
+
+}
+ .historytab a{
+padding:10px 10px;
+margin: 15px auto;
+text-decoration:none;
+cursor: pointer;
+color:black;
+font-size: 18px;
+font-weight: 500;
+border-radius: 5px;
+text-align: center;
+background: #dde4e6;
+font-weight: 600;
+}
+
+.retrnn{
+display: flex;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer2 {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+ 
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  border-top: 1px solid #e5e5e5;
+  font-weight: 300;
+  font-size: 17px;
+
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+   font-size: 13px;
+}
+
+.footer__logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 20px;
+  z-index: inherit; 
+ 
+
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav__title {
+  font-weight: 500;
+  font-size: 17px;
+  padding-bottom: 19px;
+
+}
+
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgba(124, 0, 0, 0.07);
+  border-radius: 100px;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 11px;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+   font-size: 14px;
+
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+footer a:hover {
+  color: #00cbfe;
+  font-size: 16px;
+
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: rgb(255, 255, 255);
+  
+}
+
+
+
+.legal {
+ 
+  background-color: black;
+color: rgb(255, 255, 255);
+text-align: center;
+ width: 100%;
+ font-size: 13px;
+ padding-bottom:18px;
+}
+
+
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+ </style>
+
+ </head>
+
+<body  >
+
+  <nav>
+    <div class="logo">
+    <a href="/" style="text-decoration: none; color: #00cbfe;" >
+      
+
+      Earthquake Predictor </a>
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i style=" font-family: 'Poppins', sans-serif;   font-size: 15px;
+  font-weight: 600;  padding: 4px 17px;   border-radius: 5px; background:#00cbfe; color: black ;" >
+   Menu </i>
+    </label>
+    <ul>
+      <li><a class="  active   " href="/home">Home</a></li>
+      <li><a class="     " href="/aboutproject">About Project</a></li>
+    
+      </ul>
+  </nav>
+
+
+
+
+
+
+
+
+<div class="cards">
+   
+    <div style="font-size:17px; color : white; font-weight: 350; ">
+
+        
+        This is <b style="font-size:22px; color : #00cbfe; font-weight: 560;">  A Small Project based 
+        on Machine Learning </b>  
+         which predicts the intensity on Earthquake around you on
+      the basis of following four factors.  
+<br> <br>   
+       
+    </div>
+
+</div>
+
+
+
+<div class="contain">
+     
+
+ 
+<h3 > Fill following Details to predict the Earthquake Possibility around you! <br> <br> </h3>
+
+<div>
+  <form action="/prediction"  method="post">
+  <br>
+    <label class="labe"> Lattitude </label>
+    <input type="number" step="0.01"   name="latitude" id="latitude" placeholder="Format- 26.76">
+    <p style="font-size:13px; color : #00cbfe; font-weight: 400;" ></p>
+ <br>
+    <label class="labe" >Longitude </label>
+    <input type="number" step="0.01"   name="longitude" id="longitude" placeholder="Format- 83.37">
+    <p style="font-size:13px; color : #00cbfe; font-weight: 400;" >  </p>
+   
+ 
+  <br>   <br>  
+    <input class="btnn" type="submit" value="Predict">
+  </form>
+</div>
+</div>
+
+
+
+
+
+<div class="cards">
+    <div class="titlee">
+       The  Project <br>
+    </div>
+
+<
+
+<div>
+
+    <div class="retrnn">
+        <div class="historytab">
+            <a  href="/review"> </a>
+           </div>
+
+           <div class="historytab">
+               <a  href="/sourcecode">   </a>
+              </div>
+
+</div>
+    </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="footer2">
+
+
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <a href="/home" style="text-decoration: none; color: white;"><h1 class="footer__logo"> 
+      Earthquake Predictor </h1></a>
+
+        <h2 style="color: #00cbfe;">  A Small Machine Learning Project </h2>
+Predict the chances of Earthquake around you <br>
+
+        
+       
+      </div>
+
+      <ul class="footer__nav">
+
+        <li class="nav__item">
+          <h2 class="nav__title" style="color: #00cbfe;">Navigations</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="/home"> Home </a>
+            </li>
+
+            <li>
+              <a href="/aboutproject"> About </a>
+            </li>
+
+            
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title" style="color: #00cbfe; align-items: center;">Follow Developer On</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="" target="_blank" >
+                <span class="fab fa-instagram" style="text-decoration: none; color: #C13584"> </span> &nbsp; Instagram </a>
+            </li>
+
+            <li>
+              <a href="" target="_blank" >
+                <span class="fab fa-facebook" style="text-decoration: none; color: #3b5998"> </span> &nbsp; Facebook </a>
+            </li>
+
+            <li>
+               <a href="" target="_blank" >
+            <span class="fab fa-twitter" style="text-decoration: none; color: #00Acee">  </span> &nbsp; Twitter</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+
+    <br> <br>
+
+    <p>&copy;  
+    </p>
+  </div>
+  </footer>
+  </div>
+</body>
+
+</html>
