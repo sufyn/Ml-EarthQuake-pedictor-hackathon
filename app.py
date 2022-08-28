@@ -32,18 +32,6 @@ def aboutproject():
 
 
 
-@app.route('/review')
-def review():
-    return render_template('review.html')
-
-
-@app.route('/sourcecode')
-def sourcecode():
-    return render_template('sourcecode.html')
-
-@app.route('/creator')
-def creator():
-    return render_template('creator.html')
 
 
 
